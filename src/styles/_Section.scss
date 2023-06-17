@@ -1,0 +1,19 @@
+@import "datas";
+
+.globalSection {
+    @include flex-disposition(initial);
+
+    &--homeSection {
+        background: $secondary-color;
+        border-radius: 25px;
+        padding: 20px 0 20px 0;
+        margin-top: 50px;
+        flex-wrap: wrap;
+    }
+
+    &--aboutUsSection {
+        margin-top: 20px;
+        padding: 0 8% 0 8%;
+        flex-direction: column;
+    }
+}

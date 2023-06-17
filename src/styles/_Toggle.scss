@@ -1,0 +1,35 @@
+@import "datas";
+
+.toggleContainer {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    &__toggle {
+        display: flex;
+        height: 47px;
+        background-color: $main-color;
+        border-radius: 5px;
+        color: white;
+        align-items: center;
+        font-size: 24px;
+        justify-content: space-between;
+        &__title {
+            margin-left: 15px;
+        }
+        &__icon {
+            margin-right: 30px;
+        }
+    }
+    &__description {
+        background-color: $secondary-color;
+        margin: 0;
+        color: $main-color;
+        font-size: 24px;
+        font-weight: 400;
+        border-radius: 5px;
+        padding: 40px 20px 20px 20px;
+        position: relative;
+        bottom: 10px;
+        z-index: -1;
+    }
+}
