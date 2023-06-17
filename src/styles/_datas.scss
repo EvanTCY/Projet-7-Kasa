@@ -1,1 +1,9 @@
 $main-color: #ff6060;
+
+$main-margin-page: 3% 8% 3% 8%;
+
+@mixin flex-disposition($initial: center) {
+    display: flex;
+    align-items: $initial;
+    justify-content: center;
+}

@@ -1,4 +1,4 @@
-import logo from "../img/logoblanc.png";
+import logo from "../img/logos/logoblanc.png";
 import "../styles/_Footer.scss";
 
 function Footer() {

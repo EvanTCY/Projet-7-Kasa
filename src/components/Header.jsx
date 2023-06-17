@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Nav from "./Nav";
 
 import "../styles/_Header.scss";
-import logo from "../img/logomaincolor.png";
+import logo from "../img/logos/logomaincolor.png";
 
 function Header() {
     return (
@@ -14,7 +14,6 @@ function Header() {
                     alt="logo-Kasa"
                 />
             </div>
-
             <Nav />
         </header>
     );
