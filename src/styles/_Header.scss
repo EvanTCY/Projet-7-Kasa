@@ -1,0 +1,30 @@
+@import "datas";
+
+header {
+    margin: 3% 8% 3% 8%;
+    display: flex;
+    align-items: center;
+}
+
+.logoContainer {
+    flex: 1;
+    &__logoHeader {
+        height: 68px;
+    }
+}
+
+.navBar {
+    flex: 1;
+    text-align: end;
+
+    &__link {
+        text-decoration: none;
+        color: $main-color;
+        font-size: 24px;
+        text-align: end;
+
+        &--accueil {
+            margin-right: 70px;
+        }
+    }
+}
