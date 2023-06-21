@@ -9,12 +9,12 @@
         height: 47px;
         background-color: $main-color;
         border-radius: 5px;
-        color: white;
         align-items: center;
         font-size: 24px;
         justify-content: space-between;
         &__title {
             margin-left: 15px;
+            color: white;
         }
         &__icon {
             margin-right: 30px;

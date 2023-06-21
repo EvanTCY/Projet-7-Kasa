@@ -1,0 +1,20 @@
+@import "datas";
+
+* {
+    color: $main-color;
+}
+
+.errorTitle {
+    font-size: 288px;
+    margin: 80px 0 40px 0;
+    font-weight: 700;
+}
+
+.oups {
+    font-size: 38px;
+}
+
+.homeLink {
+    margin: 15% 0 8% 0;
+    font-size: 18px;
+}
