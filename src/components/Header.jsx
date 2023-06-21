@@ -1,7 +1,7 @@
 import Nav from "./Nav";
 
 import "../styles/_Header.scss";
-import logo from "../img/logos/logomaincolor.png";
+import logo from "../img/logos/mainColorLogo.png";
 
 function Header() {
     return (
