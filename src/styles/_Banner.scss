@@ -1,18 +1,7 @@
 @import "datas";
 
 .banner {
-    @include flex-disposition();
-    height: 223px;
-    overflow: hidden;
-    margin: 0;
-    border-radius: 25px;
-    position: relative;
-
-    &__img {
-        object-fit: cover;
-        margin: 0;
-        width: 100%;
-    }
+    @include image-style-bannerAndSlide;
 
     &::before {
         content: "";

@@ -1,5 +1,5 @@
 $main-color: #ff6060;
-$secondary-color: #f7f7f7;
+$secondary-color: #f6f6f6;
 
 $main-margin-page: 3% 8% 3% 8%;
 
@@ -7,4 +7,19 @@ $main-margin-page: 3% 8% 3% 8%;
     display: flex;
     align-items: $initial;
     justify-content: center;
+}
+
+@mixin image-style-bannerAndSlide {
+    @include flex-disposition();
+    height: 223px;
+    overflow: hidden;
+    margin: 50px 0 0 0;
+    border-radius: 25px;
+    position: relative;
+
+    &__img {
+        object-fit: cover;
+        margin: 0;
+        width: 100%;
+    }
 }
