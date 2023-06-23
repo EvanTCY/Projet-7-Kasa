@@ -1,0 +1,12 @@
+@import "datas";
+.starsContainer {
+    text-align: center;
+    font-size: 24px;
+
+    &__star {
+        margin-left: 12px;
+        &--emptyStar {
+            color: darken($secondary-color, 6%);
+        }
+    }
+}
