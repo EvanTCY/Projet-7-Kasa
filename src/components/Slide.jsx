@@ -19,7 +19,7 @@ function Slide({ array, altDescription }) {
             : setCurrentIndex(currentIndex - 1);
     }
 
-    return (
+    return array.length > 1 ? (
         <div className="slide">
             <img
                 className="slide__img"
@@ -47,6 +47,16 @@ function Slide({ array, altDescription }) {
                     ? array.indexOf(array[currentIndex + 1])
                     : array.length
             }/${array.length}`}</span>
+        </div>
+    ) : (
+        <div className="slide">
+            <img
+                className="slide__img"
+                src={array[currentIndex]}
+                alt={`${altDescription} - ${array.indexOf(
+                    array[currentIndex + 1]
+                )}`}
+            />
         </div>
     );
 }
