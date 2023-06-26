@@ -6,11 +6,21 @@ footer {
 }
 
 .logoFooter {
-    margin: 65px 0 40px 0;
+    margin: 60px 0 25px 0;
 }
 
 .copyRighting {
     color: white;
     margin: 0;
-    font-size: 24px;
+    font-size: 12px;
+}
+
+@media screen and (min-width: 577px) {
+    .logoFooter {
+        margin: 65px 0 40px 0;
+    }
+
+    .copyRighting {
+        font-size: 24px;
+    }
 }

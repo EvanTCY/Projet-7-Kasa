@@ -1,14 +1,13 @@
-@import "datas";
+@import "main";
 
 .slide {
     @include image-style-bannerAndSlide;
-    height: 415px;
-    margin-top: -30px;
+    height: 255px;
+    margin-top: 20px;
+    border-radius: 10px;
 
     &__img {
-        object-fit: cover;
-        margin: 0;
-        width: 100%;
+        height: 100%;
     }
 
     &__arrows {
@@ -17,12 +16,13 @@
         display: flex;
         justify-content: space-between;
         z-index: 1;
-
         &__left {
-            margin-left: 25px;
+            margin-left: 10px;
+            height: 24px;
         }
         &__right {
-            margin-right: 25px;
+            margin-right: 10px;
+            height: 24px;
         }
     }
 
@@ -33,5 +33,23 @@
         text-align: center;
         color: white;
         font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 577px) {
+    .slide {
+        height: 415px;
+        margin-top: -30px;
+
+        &__arrows {
+            &__left {
+                margin-left: 25px;
+                height: 24px;
+            }
+            &__right {
+                margin-right: 25px;
+                height: 24px;
+            }
+        }
     }
 }

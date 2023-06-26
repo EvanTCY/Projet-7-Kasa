@@ -1,41 +1,42 @@
-@import "datas";
+@import "main";
 
 .toggleContainer {
     width: 100%;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     overflow: hidden;
-    font-size: 24px;
+    font-size: 13px;
 
     &--apartmentPage {
-        font-size: 18px;
-        width: 47%;
+        font-size: 13px;
     }
 
     &__toggle {
         display: flex;
-        height: 47px;
+        align-items: center;
+        height: 30px;
         background-color: $main-color;
         border-radius: 5px;
-        align-items: center;
         justify-content: space-between;
         &__title {
-            margin-left: 15px;
             color: white;
+            margin-left: 10px;
         }
         &__icon {
-            margin-right: 30px;
+            margin-right: 10px;
+            height: 10px;
         }
     }
     &__description {
-        background-color: $secondary-color;
-        margin: 0;
         color: $main-color;
         font-weight: 400;
-        border-radius: 5px;
-        padding: 40px 20px 20px 20px;
-        position: relative;
+        background-color: $secondary-color;
+        margin: 0;
+        padding: 30px 10px 50px 10px;
         bottom: 10px;
+        font-size: 12px;
+        border-radius: 5px;
+        position: relative;
         z-index: -1;
     }
 }
@@ -44,4 +45,35 @@
     padding: 0;
     margin: 0;
     list-style-type: none;
+}
+
+@media screen and (min-width: 577px) {
+    .toggleContainer {
+        width: 100%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        overflow: hidden;
+        font-size: 24px;
+
+        &--apartmentPage {
+            font-size: 18px;
+            width: 47%;
+        }
+
+        &__toggle {
+            height: 47px;
+            border-radius: 5px;
+            align-items: center;
+            &__title {
+                margin-left: 15px;
+            }
+            &__icon {
+                margin-right: 30px;
+            }
+        }
+        &__description {
+            padding: 40px 20px 20px 20px;
+            bottom: 10px;
+        }
+    }
 }

@@ -1,7 +1,9 @@
-@import "datas";
+@import "main";
 
 .banner {
     @include image-style-bannerAndSlide;
+    margin-bottom: 10px;
+    border-radius: 10px;
 
     &::before {
         content: "";
@@ -12,20 +14,37 @@
         height: 100%;
         background-color: black;
         opacity: 0.3;
-        border-radius: 25px;
+        border-radius: 10px;
         @include flex-disposition();
     }
 
     &__title {
-        font-size: 48px;
+        font-size: 24px;
         font-weight: normal;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         color: white;
-        text-align: center;
-        margin: 0;
+        text-align: left;
+        margin: 0 0 0 20px;
         width: 100%;
+    }
+}
+
+@media screen and (min-width: 577px) {
+    .banner {
+        height: 223px;
+        border-radius: 25px;
+
+        &::before {
+            border-radius: 25px;
+        }
+
+        &__title {
+            font-size: 48px;
+            text-align: center;
+            margin: 0;
+        }
     }
 }

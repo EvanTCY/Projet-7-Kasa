@@ -1,20 +1,32 @@
-@import "datas";
+@import "main";
 
-* {
+.errorTitle {
+    font-size: 96px;
+    margin: 45% 0 10px 0;
+    font-weight: 700;
+}
+.oups {
+    font-size: 18px;
+    margin: 0;
+}
+.homeLink {
+    margin: 30% 0 50% 0;
+    font-size: 14px;
     color: $main-color;
 }
 
-.errorTitle {
-    font-size: 288px;
-    margin: 80px 0 40px 0;
-    font-weight: 700;
-}
+@media screen and (min-width: 577px) {
+    .errorTitle {
+        font-size: 288px;
+        margin: 80px 0 40px 0;
+    }
 
-.oups {
-    font-size: 38px;
-}
+    .oups {
+        font-size: 38px;
+    }
 
-.homeLink {
-    margin: 15% 0 8% 0;
-    font-size: 18px;
+    .homeLink {
+        margin: 15% 0 8% 0;
+        font-size: 18px;
+    }
 }
