@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+
+$main-color: #ff6060;
+$secondary-color: #f6f6f6;
+
+$main-margin-page: 3% 8% 3% 8%;
+$main-margin-mobilPage: 3% 5% 5% 5%;
+
+@mixin flex-disposition($initial: center) {
+    display: flex;
+    align-items: $initial;
+    justify-content: center;
+}
+
+@mixin image-style-bannerAndSlide {
+    @include flex-disposition();
+    height: 111px;
+    overflow: hidden;
+    margin: 0;
+    border-radius: 10px;
+    position: relative;
+
+    &__img {
+        object-fit: cover;
+        margin: 0;
+        width: 100%;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: $main-color;
+}
+
+main {
+    margin: $main-margin-mobilPage;
+}
+
+@media screen and (min-width: 577px) {
+    main {
+        margin: $main-margin-page;
+    }
+}

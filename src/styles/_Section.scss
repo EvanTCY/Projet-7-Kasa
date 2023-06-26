@@ -1,20 +1,16 @@
-@import "datas";
+@import "main";
 
 .globalSection {
     @include flex-disposition(initial);
 
     &--homeSection {
-        background: $secondary-color;
-        border-radius: 25px;
-        padding: 20px 0 20px 0;
-        margin-top: 50px;
-        flex-wrap: wrap;
+        flex-direction: column;
     }
 
     &--aboutUsSection {
         margin-top: 20px;
-        margin-bottom: 15%;
-        padding: 0 8% 0 8%;
+        margin-bottom: 40%;
+        padding: 0;
         flex-direction: column;
     }
 
@@ -24,7 +20,37 @@
     }
 
     &--apartmentSection {
-        margin-top: 40px;
+        margin-top: 25px;
         flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 577px) {
+    .globalSection {
+        &--homeSection {
+            background: $secondary-color;
+            border-radius: 25px;
+            padding: 20px 0 20px 0;
+            margin-top: 50px;
+            flex-wrap: wrap;
+            flex-direction: initial;
+        }
+
+        &--aboutUsSection {
+            margin-top: 20px;
+            margin-bottom: 15%;
+            padding: 0 8% 0 8%;
+            flex-direction: column;
+        }
+
+        &--errorSection {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        &--apartmentSection {
+            margin-top: 40px;
+            flex-direction: column;
+        }
     }
 }

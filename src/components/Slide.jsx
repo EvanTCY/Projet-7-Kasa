@@ -7,6 +7,8 @@ function Slide({ array, altDescription }) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const lastIndex = array.length - 1;
 
+    const screenWidth = window.innerWidth;
+
     function nextIndex() {
         currentIndex >= lastIndex
             ? setCurrentIndex(0)
@@ -42,11 +44,13 @@ function Slide({ array, altDescription }) {
                     alt="slide-arrowRight"
                 />
             </div>
-            <span className="slide__imageNumber">{`${
-                currentIndex < array.length - 1
-                    ? array.indexOf(array[currentIndex + 1])
-                    : array.length
-            }/${array.length}`}</span>
+            {screenWidth >= 576 && (
+                <span className="slide__imageNumber">{`${
+                    currentIndex < array.length - 1
+                        ? array.indexOf(array[currentIndex + 1])
+                        : array.length
+                }/${array.length}`}</span>
+            )}
         </div>
     ) : (
         <div className="slide">

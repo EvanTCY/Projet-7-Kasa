@@ -10,8 +10,6 @@ import "../styles/_Apartment.scss";
 import "../styles/_Banner.scss";
 import Toggle from "../components/Toggle";
 
-import { useState } from "react";
-
 function Apartment() {
     const params = useParams();
     const pageId = params.id;

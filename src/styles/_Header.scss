@@ -1,30 +1,52 @@
-@import "datas";
+@import "main";
 
 header {
-    margin: $main-margin-page;
+    margin: $main-margin-mobilPage;
     display: flex;
     align-items: center;
+    margin-top: 5%;
+    margin-bottom: 2%;
 }
-
 .logoContainer {
     flex: 1;
     &__logoHeader {
-        height: 68px;
+        height: 47px;
     }
 }
 
 .navBar {
-    flex: 1;
+    flex: 0.8;
     text-align: end;
-
     &__link {
-        text-decoration: none;
         color: $main-color;
-        font-size: 24px;
-        text-align: end;
-
+        text-decoration: none;
+        font-size: 12px;
+        text-transform: uppercase;
         &--accueil {
-            margin-right: 70px;
+            margin-right: 20px;
+        }
+    }
+}
+
+@media screen and (min-width: 577px) {
+    header {
+        margin: $main-margin-page;
+    }
+
+    .logoContainer {
+        &__logoHeader {
+            height: 68px;
+        }
+    }
+
+    .navBar {
+        flex: 1;
+        &__link {
+            font-size: 24px;
+            text-transform: none;
+            &--accueil {
+                margin-right: 70px;
+            }
         }
     }
 }

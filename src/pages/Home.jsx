@@ -7,12 +7,22 @@ import Banner from "../components/Banner";
 import Section from "../components/Section";
 
 function Home() {
+    const screenWidth = window.innerWidth;
+
     return (
         <React.Fragment>
             <Banner image={homeBanner} className="banner">
-                <h1 className="banner__title">
-                    Chez vous, partout et ailleurs
-                </h1>
+                {screenWidth <= 576 ? (
+                    <h1 className="banner__title">
+                        Chez vous,
+                        <br />
+                        partout et ailleurs
+                    </h1>
+                ) : (
+                    <h1 className="banner__title">
+                        Chez vous, partout et ailleurs
+                    </h1>
+                )}
             </Banner>
 
             <Section className="globalSection globalSection--homeSection">
