@@ -54,12 +54,12 @@ function Apartment() {
 
                 <div className="togglesContainer">
                     <Toggle
-                        className="toggleContainer--apartmentPage"
+                        className="apartmentPage"
                         title="Description"
                         description={apartment.description}
                     />
                     <Toggle
-                        className="toggleContainer--apartmentPage"
+                        className="apartmentPage"
                         title="Equipements"
                         description={
                             <ul className="ulEquipements">

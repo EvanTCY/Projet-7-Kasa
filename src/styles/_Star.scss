@@ -12,13 +12,19 @@
     }
 }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 768px) {
     .starsContainer {
         text-align: center;
-        font-size: 24px;
+        font-size: 20px;
 
         &__star {
             margin-left: 12px;
         }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .starsContainer {
+        font-size: 24px;
     }
 }

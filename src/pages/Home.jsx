@@ -11,8 +11,8 @@ function Home() {
 
     return (
         <React.Fragment>
-            <Banner image={homeBanner} className="banner">
-                {screenWidth <= 576 ? (
+            <Banner image={homeBanner} className="banner banner--apartment">
+                {screenWidth <= 768 ? (
                     <h1 className="banner__title">
                         Chez vous,
                         <br />

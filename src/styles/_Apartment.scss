@@ -7,16 +7,16 @@
 .bloc-1 {
     display: flex;
     flex-direction: column;
-    // justify-content: space-between;
 
     &__title {
         font-size: 18px;
         font-weight: 500;
+        line-height: 25px;
         margin: 0;
     }
     &__location {
         font-size: 14px;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
         margin-top: 10px;
     }
     &__tagsContainer {
@@ -60,7 +60,7 @@
     margin-top: 10px;
 }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 768px) {
     .descriptionsContainer {
         justify-content: space-between;
         flex-direction: initial;
@@ -69,13 +69,15 @@
     .bloc-1 {
         flex-direction: column;
         justify-content: space-between;
+        flex: 1;
 
         &__title {
-            font-size: 36px;
+            font-size: 30px;
+            line-height: normal;
         }
         &__location {
             font-size: 18px;
-            margin-bottom: 25px;
+            margin-bottom: 15px;
             margin-top: 5px;
         }
     }
@@ -104,5 +106,13 @@
     .togglesContainer {
         flex-direction: initial;
         justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .bloc-1 {
+        &__title {
+            font-size: 36px;
+        }
     }
 }

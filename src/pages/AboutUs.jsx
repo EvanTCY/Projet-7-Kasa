@@ -9,7 +9,10 @@ import Toggle from "../components/Toggle";
 function AboutUs() {
     return (
         <React.Fragment>
-            <Banner image={aboutUsbanner} className={"banner banner--size"} />
+            <Banner
+                image={aboutUsbanner}
+                className={"banner banner--aboutUs"}
+            />
             <Section className="globalSection globalSection--aboutUsSection">
                 {aPropos.map((about, index) => (
                     <Toggle

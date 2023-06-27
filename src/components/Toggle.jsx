@@ -7,7 +7,7 @@ function Toggle({ title, description, className }) {
     const [isOpen, setIsOpen] = useState(false);
 
     return isOpen ? (
-        <div className={`toggleContainer ${className}`}>
+        <div className={`toggleContainer toggleContainer--${className}`}>
             <div
                 className="toggleContainer__toggle"
                 onClick={() => setIsOpen(false)}
@@ -19,10 +19,14 @@ function Toggle({ title, description, className }) {
                     className="toggleContainer__toggle__icon"
                 />
             </div>
-            <p className="toggleContainer__description">{description}</p>
+            <p
+                className={`toggleContainer__description toggleContainer__description--${className}`}
+            >
+                {description}
+            </p>
         </div>
     ) : (
-        <div className={`toggleContainer ${className}`}>
+        <div className={`toggleContainer toggleContainer--${className}`}>
             <div
                 className="toggleContainer__toggle"
                 onClick={() => setIsOpen(true)}
@@ -34,7 +38,6 @@ function Toggle({ title, description, className }) {
                     className="toggleContainer__toggle__icon"
                 />
             </div>
-            {/* <p className="toggleContainer__description">{description}</p> */}
         </div>
     );
 }

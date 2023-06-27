@@ -2,9 +2,9 @@
 
 .slide {
     @include image-style-bannerAndSlide;
-    height: 255px;
     margin-top: 20px;
     border-radius: 10px;
+    height: 255px;
 
     &__img {
         height: 100%;
@@ -36,10 +36,15 @@
     }
 }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 450px) {
+    .slide {
+        height: 350px;
+    }
+}
+
+@media screen and (min-width: 768px) {
     .slide {
         height: 415px;
-        margin-top: -30px;
 
         &__arrows {
             &__left {
@@ -51,5 +56,11 @@
                 height: 24px;
             }
         }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .slide {
+        margin-top: -30px;
     }
 }

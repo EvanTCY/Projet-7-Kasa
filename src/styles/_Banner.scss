@@ -5,6 +5,15 @@
     margin-bottom: 10px;
     border-radius: 10px;
 
+    &--apartment {
+        height: 111px;
+    }
+
+    &--aboutUs {
+        height: 223px;
+    }
+
+    // to make a filter on the banner picture
     &::before {
         content: "";
         position: absolute;
@@ -32,7 +41,25 @@
     }
 }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 450px) {
+    .banner--apartment {
+        height: 156px;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .banner {
+        &--apartment {
+            height: 200px;
+        }
+
+        &__title {
+            font-size: 38px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
     .banner {
         height: 223px;
         border-radius: 25px;
