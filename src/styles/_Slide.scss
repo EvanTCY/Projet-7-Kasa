@@ -49,11 +49,11 @@
         &__arrows {
             &__left {
                 margin-left: 25px;
-                height: 24px;
+                height: 60px;
             }
             &__right {
                 margin-right: 25px;
-                height: 24px;
+                height: 60px;
             }
         }
     }
@@ -62,5 +62,13 @@
 @media screen and (min-width: 992px) {
     .slide {
         margin-top: -30px;
+        &__arrows {
+            &__left {
+                height: 79.2px;
+            }
+            &__right {
+                height: 79.2px;
+            }
+        }
     }
 }
