@@ -5,6 +5,7 @@
 
     &--homeSection {
         flex-direction: column;
+        margin-bottom: 150px;
     }
 
     &--aboutUsSection {
@@ -21,6 +22,7 @@
 
     &--apartmentSection {
         margin-top: 10px;
+        margin-bottom: 100px;
         flex-direction: column;
     }
 }
@@ -42,7 +44,7 @@
             margin-top: 50px;
             background: $secondary-color;
             border-radius: 25px;
-            padding: 20px 0 20px 0;
+            padding: 15px 0 15px 0;
         }
 
         &--aboutUsSection {
@@ -59,7 +61,16 @@
 
         &--apartmentSection {
             margin-top: 25px;
+            margin-bottom: 150px;
             flex-direction: column;
+        }
+    }
+}
+
+@media screen and (min-width: 1382px) {
+    .globalSection {
+        &--homeSection {
+            padding: 35px 0 35px 0;
         }
     }
 }

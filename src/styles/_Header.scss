@@ -57,3 +57,12 @@ header {
         }
     }
 }
+
+@media screen and (min-width: 1725px) {
+    header {
+        max-width: 1725px;
+        padding: 0 100px 0 100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
