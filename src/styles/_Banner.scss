@@ -46,17 +46,16 @@
         height: 100%;
     }
 }
-
 @media screen and (min-width: 450px) {
     .banner--apartment {
         height: 156px;
     }
 }
-
 @media screen and (min-width: 576px) {
     .banner {
         &--apartment {
             height: 200px;
+            margin-bottom: 10px;
         }
 
         &__title {
@@ -66,6 +65,24 @@
 }
 
 @media screen and (min-width: 768px) {
+    .banner {
+        height: 223px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+
+        &::before {
+            border-radius: 10px;
+        }
+
+        &__title {
+            font-size: 48px;
+            text-align: center;
+            margin: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
     .banner {
         height: 223px;
         border-radius: 25px;
@@ -78,14 +95,6 @@
             font-size: 48px;
             text-align: center;
             margin: 0;
-        }
-    }
-}
-
-@media screen and (min-width: 576px) {
-    .banner {
-        &--apartment {
-            margin-bottom: -5px;
         }
     }
 }

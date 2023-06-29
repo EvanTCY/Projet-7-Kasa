@@ -4,6 +4,8 @@ import Tag from "../components/Tag";
 import Star from "../components/Star";
 import { apartments } from "../datas/apartments";
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import React from "react";
 
 import "../styles/_Apartment.scss";
@@ -13,8 +15,18 @@ import Toggle from "../components/Toggle";
 function Apartment() {
     const params = useParams();
     const pageId = params.id;
+    const navigate = useNavigate();
 
     const apartment = apartments.find((apartment) => apartment.id === pageId);
+    useEffect(() => {
+        if (!apartment) {
+            navigate("logement-introuvable");
+        }
+    }, []);
+
+    if (!apartment) {
+        return null;
+    }
 
     return (
         <React.Fragment>
