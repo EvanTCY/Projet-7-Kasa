@@ -12,6 +12,7 @@
     }
 
     &__toggle {
+        cursor: pointer;
         display: flex;
         align-items: center;
         height: 30px;
@@ -24,7 +25,7 @@
         }
         &__icon {
             margin-right: 10px;
-            height: 10px;
+            height: 9.14px;
         }
     }
     &__description {
@@ -67,9 +68,6 @@
             &__title {
                 margin-left: 15px;
             }
-            &__icon {
-                margin-right: 30px;
-            }
         }
         &__description {
             padding: 40px 20px 20px 20px;
@@ -82,5 +80,9 @@
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
+    .toggleContainer__toggle__icon {
+        height: 13.71px;
+        margin-right: 30px;
+    }
 }

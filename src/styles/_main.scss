@@ -41,6 +41,14 @@ main {
     margin: $main-margin-mobilPage;
 }
 
+a {
+    cursor: pointer;
+    &:focus {
+        border: 3px solid $main-color;
+        border-radius: 0;
+    }
+}
+
 @media screen and (min-width: 992px) {
     main {
         margin: $main-margin-page;

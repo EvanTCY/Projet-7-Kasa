@@ -9,6 +9,7 @@ import Section from "../components/Section";
 import { useEffect, useState } from "react";
 
 function Home() {
+    document.title = `Kasa - Accueil`;
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
     useEffect(() => {

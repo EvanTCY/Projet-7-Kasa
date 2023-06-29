@@ -18,6 +18,11 @@ function Apartment() {
     const navigate = useNavigate();
 
     const apartment = apartments.find((apartment) => apartment.id === pageId);
+
+    // useEffect(() => {
+    document.title = `Kasa - ${apartment.title}`;
+    // }, []);
+
     useEffect(() => {
         if (!apartment) {
             navigate("logement-introuvable");

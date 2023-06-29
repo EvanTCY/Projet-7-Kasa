@@ -3,7 +3,7 @@ import arrowUp from "../img/vector/VectorUp.png";
 import arrowDown from "../img/vector/VectorDown.png";
 import { useState } from "react";
 
-function Toggle({ title, description, className, balise }) {
+function Toggle({ title, description, className }) {
     const [isOpen, setIsOpen] = useState(false);
 
     return isOpen ? (

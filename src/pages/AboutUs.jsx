@@ -7,6 +7,8 @@ import Section from "../components/Section";
 import Toggle from "../components/Toggle";
 
 function AboutUs() {
+    document.title = `Kasa - À propos`;
+
     return (
         <React.Fragment>
             <Banner
@@ -14,7 +16,7 @@ function AboutUs() {
                 className={"banner banner--aboutUs"}
             />
             <Section className="globalSection globalSection--aboutUsSection">
-                {aPropos.map((about, index, className) => (
+                {aPropos.map((about, index) => (
                     <Toggle
                         key={index}
                         title={about.title}

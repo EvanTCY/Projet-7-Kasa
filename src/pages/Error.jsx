@@ -6,6 +6,8 @@ import { useEffect, useState } from "react";
 function Error() {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
+    document.title = `Kasa - Page introuvable`;
+
     useEffect(() => {
         const handleResize = () => {
             setScreenWidth(window.innerWidth);
