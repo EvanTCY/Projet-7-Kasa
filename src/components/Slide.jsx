@@ -2,12 +2,21 @@ import { useState } from "react";
 import arrowLeft from "../img/vector/VectorLeft.png";
 import arrowRight from "../img/vector/VectorRight.png";
 import "../styles/_Slide.scss";
+import { useEffect } from "react";
 
 function Slide({ array, altDescription }) {
     const [currentIndex, setCurrentIndex] = useState(0);
+
     const lastIndex = array.length - 1;
 
-    const screenWidth = window.innerWidth;
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setScreenWidth(window.innerWidth);
+        };
+        window.addEventListener("resize", handleResize);
+    }, [screenWidth]);
 
     function nextIndex() {
         currentIndex >= lastIndex
@@ -44,7 +53,7 @@ function Slide({ array, altDescription }) {
                     alt="slide-arrowRight"
                 />
             </div>
-            {screenWidth >= 576 && (
+            {screenWidth >= 768 && (
                 <span className="slide__imageNumber">{`${
                     currentIndex < array.length - 1
                         ? array.indexOf(array[currentIndex + 1])

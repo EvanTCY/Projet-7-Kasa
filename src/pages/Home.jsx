@@ -6,8 +6,17 @@ import Card from "../components/Card";
 import Banner from "../components/Banner";
 import Section from "../components/Section";
 
+import { useEffect, useState } from "react";
+
 function Home() {
-    const screenWidth = window.innerWidth;
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setScreenWidth(window.innerWidth);
+        };
+        window.addEventListener("resize", handleResize);
+    }, [screenWidth]);
 
     return (
         <React.Fragment>

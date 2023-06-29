@@ -14,11 +14,15 @@ function AboutUs() {
                 className={"banner banner--aboutUs"}
             />
             <Section className="globalSection globalSection--aboutUsSection">
-                {aPropos.map((about, index) => (
+                {aPropos.map((about, index, className) => (
                     <Toggle
                         key={index}
                         title={about.title}
-                        description={about.description}
+                        description={
+                            <p className={`toggleContainer__description`}>
+                                {about.description}
+                            </p>
+                        }
                     />
                 ))}
             </Section>

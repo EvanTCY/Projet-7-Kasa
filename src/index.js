@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
@@ -13,7 +13,7 @@ import Footer from "./components/Footer";
 
 import "./styles/_main.scss";
 
-ReactDOM.render(
+ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
         <Router>
             <Header />
@@ -27,6 +27,5 @@ ReactDOM.render(
             </Main>
             <Footer />
         </Router>
-    </React.StrictMode>,
-    document.getElementById("root")
+    </React.StrictMode>
 );

@@ -68,24 +68,35 @@ function Apartment() {
                     <Toggle
                         className="apartmentPage"
                         title="Description"
-                        description={apartment.description}
+                        description={
+                            <p
+                                className={`toggleContainer__description toggleContainer__description--apartmentPage`}
+                            >
+                                {apartment.description}
+                            </p>
+                        }
                     />
                     <Toggle
+                        balise={"div"}
                         className="apartmentPage"
                         title="Equipements"
                         description={
-                            <ul className="ulEquipements">
-                                {apartment.equipments.map(
-                                    (equipment, index) => (
-                                        <li
-                                            className="ulEquipements__equipement"
-                                            key={index}
-                                        >
-                                            {equipment}
-                                        </li>
-                                    )
-                                )}
-                            </ul>
+                            <div
+                                className={`toggleContainer__description toggleContainer__description--apartmentPage`}
+                            >
+                                <ul className="ulEquipements">
+                                    {apartment.equipments.map(
+                                        (equipment, index) => (
+                                            <li
+                                                className="ulEquipements__equipement"
+                                                key={index}
+                                            >
+                                                {equipment}
+                                            </li>
+                                        )
+                                    )}
+                                </ul>
+                            </div>
                         }
                     />
                 </div>

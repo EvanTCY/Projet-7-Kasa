@@ -23,6 +23,9 @@ function Nav() {
             // Si nous sommes sur la page "À Propos", réinitialiser le style du lien "Accueil" et souligner le lien "À Propos"
             setHomeLinkStyle({});
             setAboutLinkStyle({ textDecoration: "underline" });
+        } else {
+            setHomeLinkStyle({});
+            setAboutLinkStyle({});
         }
     }, [location.pathname]);
 
