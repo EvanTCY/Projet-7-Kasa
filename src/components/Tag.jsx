@@ -1,3 +1,4 @@
+// scss
 import "../styles/_Tag.scss";
 
 function Tag({ children }) {

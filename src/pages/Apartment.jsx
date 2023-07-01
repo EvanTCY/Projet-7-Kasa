@@ -1,34 +1,38 @@
+import { apartments } from "../datas/apartments";
+import { useParams, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import React from "react";
+
+// scss
+import "../styles/_Apartment.scss";
+import "../styles/_Banner.scss";
+
+// components
 import Section from "../components/Section";
 import Slide from "../components/Slide";
 import Tag from "../components/Tag";
 import Star from "../components/Star";
-import { apartments } from "../datas/apartments";
-import { useParams } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
-import React from "react";
-
-import "../styles/_Apartment.scss";
-import "../styles/_Banner.scss";
-import Toggle from "../components/Toggle";
+import Collapse from "../components/Collapse";
 
 function Apartment() {
+    // gets the apartment ID from the current page url
     const params = useParams();
     const pageId = params.id;
-    const navigate = useNavigate();
 
+    // check if the apartment ID, taken from the current page url, exists in the apartments tab
     const apartment = apartments.find((apartment) => apartment.id === pageId);
 
-    // useEffect(() => {
-    document.title = `Kasa - ${apartment.title}`;
-    // }, []);
-
+    const navigate = useNavigate();
+    // if the apartment ID does not exist, the user is redirected to the error page with useNavigate
     useEffect(() => {
-        if (!apartment) {
-            navigate("logement-introuvable");
-        }
+        apartment
+            ? (document.title = `Kasa - ${apartment.title}`)
+            : navigate("logement-introuvable");
+
+        // the effect is applied only once, when the page is rendered
     }, []);
 
+    // if the apartment ID does not exist, return null to block rendering of the apartment page and avoid errors in React App
     if (!apartment) {
         return null;
     }
@@ -36,7 +40,7 @@ function Apartment() {
     return (
         <React.Fragment>
             <Slide
-                array={apartment.pictures}
+                picturesArray={apartment.pictures}
                 altDescription={apartment.title}
             />
 
@@ -69,25 +73,24 @@ function Apartment() {
                     </div>
                 </div>
 
-                <div className="togglesContainer">
-                    <Toggle
+                <div className="collapsesContainer">
+                    <Collapse
                         className="apartmentPage"
                         title="Description"
                         description={
                             <p
-                                className={`toggleContainer__description toggleContainer__description--apartmentPage`}
+                                className={`collapseContainer__description collapseContainer__description--apartmentPage`}
                             >
                                 {apartment.description}
                             </p>
                         }
                     />
-                    <Toggle
-                        balise={"div"}
+                    <Collapse
                         className="apartmentPage"
                         title="Equipements"
                         description={
                             <div
-                                className={`toggleContainer__description toggleContainer__description--apartmentPage`}
+                                className={`collapseContainer__description collapseContainer__description--apartmentPage`}
                             >
                                 <ul className="ulEquipements">
                                     {apartment.equipments.map(

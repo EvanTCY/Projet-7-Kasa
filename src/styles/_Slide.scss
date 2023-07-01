@@ -19,10 +19,22 @@
         &__left {
             margin-left: 10px;
             height: 24px;
+            &:focus-visible {
+                outline: none;
+                box-sizing: border-box;
+                border: 3px solid $main-color;
+                border-radius: 0;
+            }
         }
         &__right {
             margin-right: 10px;
             height: 24px;
+            &:focus-visible {
+                outline: none;
+                box-sizing: border-box;
+                border: 3px solid $main-color;
+                border-radius: 0;
+            }
         }
     }
 

@@ -1,3 +1,4 @@
+// scss
 import "../styles/_Section.scss";
 
 function Section({ children, className }) {

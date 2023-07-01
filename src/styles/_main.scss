@@ -43,8 +43,10 @@ main {
 
 a {
     cursor: pointer;
-    &:focus {
-        border: 3px solid $main-color;
+    &:focus-visible {
+        outline: none;
+        box-sizing: border-box;
+        border: 3px solid darken($secondary-color, 30%);
         border-radius: 0;
     }
 }

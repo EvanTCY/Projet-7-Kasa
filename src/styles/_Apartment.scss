@@ -53,7 +53,7 @@
     }
 }
 
-.togglesContainer {
+.collapsesContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -103,7 +103,7 @@
         }
     }
 
-    .togglesContainer {
+    .collapsesContainer {
         flex-direction: initial;
         justify-content: space-between;
     }

@@ -5,28 +5,26 @@ function Nav() {
     const homePath = "/";
     const aboutPath = "/apropos";
 
-    // Utilisation de useLocation pour obtenir l'objet location de React Router
+    // gets the current url
     const location = useLocation();
 
-    // États pour les styles des liens
+    // state for link style
     const [homeLinkStyle, setHomeLinkStyle] = useState({});
     const [aboutLinkStyle, setAboutLinkStyle] = useState({});
 
-    // Utilisation de useEffect pour réagir aux changements de location.pathname
     useEffect(() => {
-        // Vérification du chemin de l'URL pour déterminer les styles des liens
         if (location.pathname === homePath) {
-            // Si nous sommes sur la page d'accueil, souligner le lien "Accueil" et réinitialiser le style du lien "À Propos"
+            // if location is on home page, underline "Accueil" link and unset the style on "A propos" link
             setHomeLinkStyle({ textDecoration: "underline" });
             setAboutLinkStyle({});
         } else if (location.pathname === aboutPath) {
-            // Si nous sommes sur la page "À Propos", réinitialiser le style du lien "Accueil" et souligner le lien "À Propos"
             setHomeLinkStyle({});
             setAboutLinkStyle({ textDecoration: "underline" });
         } else {
             setHomeLinkStyle({});
             setAboutLinkStyle({});
         }
+        // apply effect to url change
     }, [location.pathname]);
 
     return (
@@ -34,15 +32,11 @@ function Nav() {
             <Link
                 className="navBar__link navBar__link--accueil"
                 to="/"
-                style={homeLinkStyle} // Appliquer le style défini par l'état homeLinkStyle
+                style={homeLinkStyle}
             >
                 Accueil
             </Link>
-            <Link
-                className="navBar__link"
-                to="/apropos"
-                style={aboutLinkStyle} // Appliquer le style défini par l'état aboutLinkStyle
-            >
+            <Link className="navBar__link" to="/apropos" style={aboutLinkStyle}>
                 A Propos
             </Link>
         </nav>

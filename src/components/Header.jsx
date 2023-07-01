@@ -1,7 +1,10 @@
-import Nav from "./Nav";
-
-import "../styles/_Header.scss";
 import logo from "../img/logos/mainColorLogo.png";
+
+// scss
+import "../styles/_Header.scss";
+
+// components
+import Nav from "./Nav";
 
 function Header() {
     return (
