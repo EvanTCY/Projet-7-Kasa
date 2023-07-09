@@ -27,7 +27,7 @@ function Apartment() {
     useEffect(() => {
         apartment
             ? (document.title = `Kasa - ${apartment.title}`)
-            : navigate("logement-introuvable");
+            : navigate("/error");
 
         // the effect is applied only once, when the page is rendered
     }, []);

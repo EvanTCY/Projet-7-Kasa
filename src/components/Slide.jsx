@@ -8,11 +8,13 @@ import "../styles/_Slide.scss";
 function Slide({ picturesArray, altDescription }) {
     // gets the current screen width
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+    // set the new current screen width
+    const handleResize = () => {
+        setScreenWidth(window.innerWidth);
+    };
+
     useEffect(() => {
-        // set the new current screen width
-        const handleResize = () => {
-            setScreenWidth(window.innerWidth);
-        };
         // listen when screen width change and apply handleResize
         window.addEventListener("resize", handleResize);
 
